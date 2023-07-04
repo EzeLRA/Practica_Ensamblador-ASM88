@@ -1,0 +1,22 @@
+;Codigo F=((A-B)*C)-(D/E)
+;Variables en la direccion de memoria
+ORG 1000h
+A DB 6
+B DB 4
+C DB 2
+D DB 1
+E DB 3
+F DB ?
+;Programa Principal
+ORG 2000h
+MOV AL,A
+MOV AH,B
+MOV BL,C
+MOV CL,D
+MOV CH,E
+SUB AL,AH
+multiplicar: ADD AL,AL
+DEC C
+JNZ multiplicar
+HLT
+END

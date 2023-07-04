@@ -1,0 +1,10 @@
+ORG 1000h
+num1 DB 2
+num2 DB ?
+;Programa Principal
+ORG 2000h
+MOV AL,num1
+ADD AL,2
+MOV num2,AL
+HLT
+END
